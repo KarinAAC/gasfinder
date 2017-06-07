@@ -16,7 +16,7 @@ const state = {
 };
 
 $(document).ready(function(){
-  
+
 
   getJSON('stations.json', (err, json) => {
 
@@ -28,7 +28,7 @@ $(document).ready(function(){
     render(root);
 
     $('#contenedorInformacion').on('click', function () {
-      return alert("go");
+      const divMap = $('<div id="div-map"></div>');
     });
 
   }

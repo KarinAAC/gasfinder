@@ -1,6 +1,8 @@
 'use strict'
 const SectionEstaciones = (update) => {
   const contenedorInformacion = $('<div id="contenedorInformacion"></div>');
+  const sectionEstacionesRow = $('<div class="row"></div>');
+  const sectionEstacionesColumn = $('<div class="col s12 m12 "></div>');
   const primeraEstacion = $('<div class="div-estaciones" id="primera-estacion"></div>');
   const segundaEstacion = $('<div class="div-estaciones" id="segunda-estacion"></div>');
   const terceraEstacion = $('<div class="div-estaciones" id="tercera-estacion"></div>');
@@ -21,10 +23,12 @@ const SectionEstaciones = (update) => {
   terceraEstacion.append(hrT);
   cuartaEstacion.append(infoCE);
   cuartaEstacion.append(hrC);
-  contenedorInformacion.append(primeraEstacion);
-  contenedorInformacion.append(segundaEstacion);
-  contenedorInformacion.append(terceraEstacion);
-  contenedorInformacion.append(cuartaEstacion);
+  sectionEstacionesColumn.append(primeraEstacion);
+  sectionEstacionesColumn.append(segundaEstacion);
+  sectionEstacionesColumn.append(terceraEstacion);
+  sectionEstacionesColumn.append(cuartaEstacion);
+  sectionEstacionesRow.append(sectionEstacionesColumn);
+  contenedorInformacion.append(sectionEstacionesRow);
 
   return contenedorInformacion;
 }
